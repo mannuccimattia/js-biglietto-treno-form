@@ -2,13 +2,17 @@
 /*                  MILESTONE 1                 */
 /* ******************************************** */
 // DEFINIZIONE DELLE VARIABILI E/O RECUPERO ELEMENTI DEL DOM
+// recupero i campi della form
 const km = document.getElementById("km");
 const age = document.getElementById("age");
 const button = document.querySelector("button");
 
+
+
 // CORPO DEL PROGRAMMA
 // al click del bottone, calcola il prezzo del biglietto
-button.addEventListener("click", function () {
+button.addEventListener("click", function (event) {
+  event.preventDefault();
   // variabili
   let price = 0.21 * km.value;
   let juniorPrice = price * 0.8;
@@ -24,4 +28,6 @@ button.addEventListener("click", function () {
   // azzero i valori inseriti dall'utente nei campi input
   km.value = "";
   age.value= "";
+
+  //
 });
