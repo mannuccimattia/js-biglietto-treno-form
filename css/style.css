@@ -1,0 +1,21 @@
+header{
+  height: 100px;
+  position: relative;
+}
+
+.navbar img{
+  width:100px;
+}
+
+h1{
+  font-family: "Italianno", serif;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  translate: -50% 0;
+}
+
+.main{
+  height: calc(100vh - 100px);
+  border-radius: 50px;
+}

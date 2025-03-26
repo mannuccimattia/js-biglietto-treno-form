@@ -5,66 +5,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calcola il prezzo del biglietto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body style="background-color: gray;">
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <!-- ***************************************** -->
-        <!--                   FORM                    -->
-        <!-- ***************************************** -->
-        <form action="">
-          <div class="row row-cols-2 g-1">
-            <div class="col">
-              <input type="text" placeholder="Inserisci nome" id="first-name" class="form-control" required>
+<body>
+  <!-- ***************************************** -->
+  <!--                  HEADER                   -->
+  <!-- ***************************************** -->
+  <header>
+    <nav class="navbar bg-white">
+      <div class="container-fluid">
+        <div class="row w-100">
+          <div class="col-4">
+            <a class="navbar-brand" href="#">
+              <img src="./img/logo_crop.jpg" alt="company logo">
+            </a>
+          </div>
+          <div class="col-8">
+            <h1 class="navbar-brand fs-1">Good Old Trains</h1>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="main container bg-secondary py-3">
+      <div class="row row-cols-1">
+        <div id="title-col" class="col d-flex justify-content-center align-items-center my-3 text-dark">
+          <h2>
+            <i class="fa-solid fa-train-subway me-2 fs-4"></i>
+            <span class="fs-3 fw-semibold">CALCOLA IL PREZZO DEL TUO BIGLIETTO</span>
+            <i class="fa-solid fa-train-subway ms-2 fs-4"></i>
+          </h2>
+        </div>
+        <div class="col">
+          <!-- ***************************************** -->
+          <!--                   FORM                    -->
+          <!-- ***************************************** -->
+          <form action="">
+            <div class="row row-cols-2 g-1 p-1">
+              <div class="col">
+                <input type="text" placeholder="Inserisci nome" id="first-name" class="form-control" required>
+              </div>
+              <div class="col">
+                <input type="text" placeholder="Inserisci cognome" id="last-name" class="form-control" required>
+              </div>
+              <div class="col">
+                <input type="number" placeholder="Inserisci la tua età" id="age" class="form-control" required>
+              </div>
+              <div class="col">
+                <input type="number" placeholder="Inserisci il n° di chilometri" id="km" class="form-control" required>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-danger w-100">Calcola</button>
+              </div>
             </div>
-            <div class="col">
-              <input type="text" placeholder="Inserisci cognome" id="last-name" class="form-control" required>
-            </div>
-            <div class="col">
-              <input type="number" placeholder="Inserisci la tua età" id="age" class="form-control" required>
-            </div>
-            <div class="col">
-              <input type="number" placeholder="Inserisci il n° di chilometri" id="km" class="form-control" required>
-            </div>
+          </form>
+          <hr>
+          <!-- ***************************************** -->
+          <!--                   CARD                    -->
+          <!-- ***************************************** -->
+          <div class="row g-1">
             <div class="col-12">
-              <button class="btn btn-danger w-100">Calcola</button>
+              <span>Nome del passeggero:</span>
+              <span id="full-name">Segnaposto nome e cognome</span>
             </div>
-          </div>
-        </form>
-        <hr>
-        <!-- ***************************************** -->
-        <!--                   CARD                    -->
-        <!-- ***************************************** -->
-        <div class="row g-1">
-          <div class="col-12">
-            <span>Nome del passeggero:</span>
-            <span id="full-name">Segnaposto nome e cognome</span>
-          </div>
-          <div class="col-6">
-            <div class="row row-cols-2">
-              <div class="col">
-                <span>Biglietto valido per:</span>
-              </div>
-              <div class="col">
-                <span id="ticket-km">Segnaposto km</span>
-              </div>
-              <div class="col">
-                <span>Costo del biglietto:</span>
-              </div>
-              <div class="col">
-                <span id="ticket-price">Segnaposto prezzo</span>
+            <div class="col-6">
+              <div class="row row-cols-2">
+                <div class="col">
+                  <span>Biglietto valido per:</span>
+                </div>
+                <div class="col">
+                  <span id="ticket-km">Segnaposto km</span>
+                </div>
+                <div class="col">
+                  <span>Costo del biglietto:</span>
+                </div>
+                <div class="col">
+                  <span id="ticket-price">Segnaposto prezzo</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
+  
 
   <script src="./js/script.js"></script>
 </body>
