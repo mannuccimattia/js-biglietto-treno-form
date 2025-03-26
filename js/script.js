@@ -15,5 +15,13 @@ button.addEventListener("click", function () {
   let seniorPrice = price * 0.6;
   let userPrice = 0;
 
+  // controllo l'età e stampo il rispettivo prezzo
+  userPrice = age.value<18 ? juniorPrice
+  : age.value>65 ? seniorPrice
+  : price;
+  console.log("Il prezzo del tuo biglietto è di",userPrice.toFixed(2).toString(), "€");
 
+  // azzero i valori inseriti dall'utente nei campi input
+  km.value = "";
+  age.value= "";
 });
