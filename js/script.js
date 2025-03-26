@@ -1,6 +1,3 @@
-/* ******************************************** */
-/*                  MILESTONE 1                 */
-/* ******************************************** */
 // DEFINIZIONE DELLE VARIABILI E/O RECUPERO ELEMENTI DEL DOM
 // recupero i campi della form
 const firstName = document.getElementById("first-name");
