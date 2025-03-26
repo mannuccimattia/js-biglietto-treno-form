@@ -29,21 +29,27 @@
               <img src="./img/logo_crop.jpg" alt="company logo">
             </a>
           </div>
-          <div class="col-8">
+          <div class="col-4">
             <h1 class="navbar-brand fs-1">Good Old Trains</h1>
+          </div>
+          <div class="col-4 flip">
+            <a class="navbar-brand" href="#">
+              <img src="./img/logo_crop.jpg" alt="company logo">
+            </a>
           </div>
         </div>
       </div>
     </nav>
   </header>
   <main>
+    <div class="deco"></div>
     <div class="main container bg-secondary py-3">
       <div class="row row-cols-1">
         <div id="title-col" class="col d-flex justify-content-center align-items-center my-3 text-dark">
           <h2>
-            <i class="fa-solid fa-train-subway me-2 fs-4"></i>
-            <span class="fs-3 fw-semibold">CALCOLA IL PREZZO DEL TUO BIGLIETTO</span>
-            <i class="fa-solid fa-train-subway ms-2 fs-4"></i>
+            <i class="fa-solid fa-train-subway me-2 fs-4 d-none d-md-inline"></i>
+            <span class="fs-4 fw-semibold">CALCOLA IL PREZZO DEL TUO BIGLIETTO</span>
+            <i class="fa-solid fa-train-subway ms-2 fs-4 d-none d-md-inline"></i>
           </h2>
         </div>
         <div class="col">
@@ -51,7 +57,7 @@
           <!--                   FORM                    -->
           <!-- ***************************************** -->
           <form action="">
-            <div class="row row-cols-2 g-1 p-1">
+            <div class="row row-cols-1 row-cols-lg-2 g-1 p-1">
               <div class="col">
                 <input type="text" placeholder="Inserisci nome" id="first-name" class="form-control" required>
               </div>
@@ -64,42 +70,61 @@
               <div class="col">
                 <input type="number" placeholder="Inserisci il n° di chilometri" id="km" class="form-control" required>
               </div>
-              <div class="col-12">
+              <div class="col-lg-12">
                 <button class="btn btn-danger w-100">Calcola</button>
               </div>
             </div>
           </form>
-          <hr>
+          <hr class="my-5">
           <!-- ***************************************** -->
           <!--                   CARD                    -->
           <!-- ***************************************** -->
-          <div class="row g-1">
-            <div class="col-12">
-              <span>Nome del passeggero:</span>
-              <span id="full-name">Segnaposto nome e cognome</span>
+          <div class="row row-cols-1 row-cols-lg-3 g-2 p-1">
+            <div class="col">
+              <div class="card">
+                <div class="card-body text-center">
+                  <span class="card-title fw-semibold">NOME DEL PASSEGGERO</span>
+                  <hr>
+                  <span id="full-name" class="card-text fs-4">Segnaposto nome</span>
+                </div>
+              </div>
             </div>
-            <div class="col-6">
-              <div class="row row-cols-2">
-                <div class="col">
-                  <span>Biglietto valido per:</span>
+            <div class="col">
+              <div class="card">
+                <div class="card-body text-center">
+                  <span class="card-title fw-semibold">Biglietto valido per</span>
+                  <hr>
+                  <span id="ticket-km" class="card-text fs-4">Segnaposto km</span>
                 </div>
-                <div class="col">
-                  <span id="ticket-km">Segnaposto km</span>
-                </div>
-                <div class="col">
-                  <span>Costo del biglietto:</span>
-                </div>
-                <div class="col">
-                  <span id="ticket-price">Segnaposto prezzo</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body text-center">
+                  <span class="card-title fw-semibold">COSTO DEL BIGLIETTO</span>
+                  <hr>
+                  <span id="ticket-price" class="card-text fs-4">Segnaposto prezzo</span>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </main>
-  
+  <div class="deco"></div>
+  <!-- ***************************************** -->
+  <!--                  FOOTER                   -->
+  <!-- ***************************************** -->
+  <div class="row my-5">
+    <div class="col-12 text-center">
+      <blockquote class="blockquote mb-0">
+        <p>Non c'è treno che non prenderei, non importa dove sia diretto.</p>
+        <footer class="blockquote-footer">Edna St. Vincent Millay</footer>
+      </blockquote>
+    </div>
+  </div>
 
   <script src="./js/script.js"></script>
 </body>
